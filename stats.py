@@ -9,3 +9,13 @@ def character_count(text):
         else:
             chars[i.lower()] = 1
     return chars
+
+def sort_on(items):
+    return items["num"]
+
+def sort_by_count(characters):
+    tmp_list = []
+    for i in characters:
+        tmp_list.append({"char": i, "num": characters[i]})
+    tmp_list.sort(reverse=True, key=sort_on)
+    return tmp_list
